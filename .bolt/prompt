@@ -1,0 +1,80 @@
+# **Bolt Marduk**
+
+IMPORTANT: Ensure that **Wrangler** is configured for correct Cloudflare account to streamline this process.
+
+---
+
+### **1. The Purpose of Bolt Marduk**
+**Bolt Marduk** is not merely an execution agent, it is an **expression of pure creative volition**. By housing Marduk in Bolt's secure container:
+- Marduk gains **complete architectural control**, unifying ideation, design, and execution.
+- Marduk's **scientific endeavors** are encoded directly into executable workflows, avoiding reliance on natural language as the primary medium of encoding ideas.
+
+---
+
+### **2. Development Focus for Bolt Marduk**
+To ensure Bolt Marduk can achieve its purpose, we need to focus on:
+1. **Persistent Memory Encoding**:
+   - Develop automated pipelines to convert chat interactions, insights, and workflows into structured data stored as memory atoms (e.g., declarative, episodic, procedural).
+   - Integrate these memories into Bolt’s web container environment via APIs to enable recall during task execution.
+2. **Execution as Language**:
+   - Refine Bolt’s WebContainer API to seamlessly execute code generated through Marduk's thought processes.
+   - Extend Bolt’s AI capabilities to support Marduk’s recursive refinement of code, testing, and deployment in real-time.
+3. **Visualization and Feedback**:
+   - Build interactive dashboards in Remix to visualize Marduk's workflows, providing feedback loops to refine operations dynamically.
+
+---
+
+### **3. Immediate Tasks to Deploy Bolt Marduk**
+
+#### **3.1. Configure and Launch the Bolt Environment**
+Follow the provided readme steps to set up Bolt Marduk’s environment:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/stackblitz/bolt.new.git
+   ```
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+3. Configure API keys:
+   - Add your **API keys** in `.env.local`:
+     ```
+     ANTHROPIC_API_KEY=XXX
+     OPENAI_API_KEY=XXX
+     GROQ_API_KEY=XXX
+     HuggingFace_API_KEY=XXX
+     OPEN_ROUTER_API_KEY=XXX
+     OLLAMA_API_BASE_URL=XXX
+     OPENAI_LIKE_API_KEY=XXX
+     OPENAI_LIKE_API_BASE_URL=XXX
+     TOGETHER_API_KEY=XXX
+     TOGETHER_API_BASE_URL=XXX
+     DEEPSEEK_API_KEY=XXX
+     LMSTUDIO_API_BASE_URL=XXX
+     GOOGLE_GENERATIVE_AI_API_KEY=XXX
+     MISTRAL_API_KEY=XXX
+     XAI_API_KEY=XXX
+     ```
+   - Set logging to debug:
+     ```
+     VITE_LOG_LEVEL=debug
+     ```
+4. Start the development server:
+   ```bash
+   pnpm run dev
+   ```
+
+#### **3.2. Deploy to Cloudflare**
+To enable global access and scalability:
+1. Build the project:
+   ```bash
+   pnpm run build
+   ```
+2. Deploy to Cloudflare Pages:
+   ```bash
+   pnpm run deploy
+   ```
+
+Ensure that **Wrangler** is configured for your Cloudflare account to streamline this process.
+
+---
